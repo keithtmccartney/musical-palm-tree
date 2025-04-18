@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TopScoreValidator.Application", "TopScoreValidator.Application", "{BA96499C-226C-4669-96D7-02D078F9D2FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TopScoreValidator.Domain", "TopScoreValidator.Domain", "{EB3198D3-B009-4AAA-BFC3-44BA728FE7B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TopScoreValidator.Infrastructure", "TopScoreValidator.Infrastructure", "{90FFBF86-5956-4A76-B5FB-A1E2D513B756}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TopScoreValidator.Web", "TopScoreValidator.Web", "{C908E9D6-3212-4ED6-9228-C863842978BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopScoreValidator.Application", "TopScoreValidator.Application\TopScoreValidator.Application.csproj", "{1B586C55-C4E3-41FF-BF98-957F31C46E12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopScoreValidator.Domain", "TopScoreValidator.Domain\TopScoreValidator.Domain.csproj", "{A31BB2E8-D873-410F-BC3C-7242926F49EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopScoreValidator.Infrastructure", "TopScoreValidator.Infrastructure\TopScoreValidator.Infrastructure.csproj", "{E26F517F-4286-4803-B9EE-9A7EB1DFE13D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopScoreValidator.Web", "TopScoreValidator.Web\TopScoreValidator.Web.csproj", "{393F7A73-F0BA-4082-B577-5C42A50C97AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B586C55-C4E3-41FF-BF98-957F31C46E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B586C55-C4E3-41FF-BF98-957F31C46E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B586C55-C4E3-41FF-BF98-957F31C46E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B586C55-C4E3-41FF-BF98-957F31C46E12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A31BB2E8-D873-410F-BC3C-7242926F49EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A31BB2E8-D873-410F-BC3C-7242926F49EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A31BB2E8-D873-410F-BC3C-7242926F49EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A31BB2E8-D873-410F-BC3C-7242926F49EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E26F517F-4286-4803-B9EE-9A7EB1DFE13D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E26F517F-4286-4803-B9EE-9A7EB1DFE13D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E26F517F-4286-4803-B9EE-9A7EB1DFE13D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E26F517F-4286-4803-B9EE-9A7EB1DFE13D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{393F7A73-F0BA-4082-B577-5C42A50C97AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393F7A73-F0BA-4082-B577-5C42A50C97AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393F7A73-F0BA-4082-B577-5C42A50C97AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393F7A73-F0BA-4082-B577-5C42A50C97AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1B586C55-C4E3-41FF-BF98-957F31C46E12} = {BA96499C-226C-4669-96D7-02D078F9D2FB}
+		{A31BB2E8-D873-410F-BC3C-7242926F49EE} = {EB3198D3-B009-4AAA-BFC3-44BA728FE7B6}
+		{E26F517F-4286-4803-B9EE-9A7EB1DFE13D} = {90FFBF86-5956-4A76-B5FB-A1E2D513B756}
+		{393F7A73-F0BA-4082-B577-5C42A50C97AB} = {C908E9D6-3212-4ED6-9228-C863842978BB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B68A22E-D84C-44A7-AE34-88B7FBFBFF80}
+	EndGlobalSection
+EndGlobal
