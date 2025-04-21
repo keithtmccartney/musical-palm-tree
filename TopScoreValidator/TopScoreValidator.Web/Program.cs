@@ -1,7 +1,14 @@
+using TopScoreValidator.Application;
+using TopScoreValidator.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+builder.Services.AddInfrastructure(builder.Configuration);
+
+builder.Services.AddApplication();
 
 var app = builder.Build();
 
@@ -22,6 +29,8 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Validation}/{action=Index}/{id?}");
+
+app.InitialiseDatabase();
 
 app.Run();

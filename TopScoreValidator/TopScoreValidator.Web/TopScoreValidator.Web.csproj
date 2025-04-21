@@ -10,4 +10,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.15" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TopScoreValidator.Application\TopScoreValidator.Application.csproj" />
+    <ProjectReference Include="..\TopScoreValidator.Infrastructure\TopScoreValidator.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
