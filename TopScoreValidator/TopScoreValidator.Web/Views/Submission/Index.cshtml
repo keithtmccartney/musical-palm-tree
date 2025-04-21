@@ -1,0 +1,69 @@
+﻿@model TopScoreValidator.Web.Models.SubmissionViewModel
+
+@{
+    ViewData["Title"] = "Submit";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-center">Submit</h2>
+            </div>
+            <div class="card-body">
+                @if (!ViewData.ModelState.IsValid)
+                {
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach (var modelState in ViewData.ModelState.Values)
+                            {
+                                foreach (var error in modelState.Errors)
+                                {
+                                    <li>@error.ErrorMessage</li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                }
+
+                @if (Model.ShowError)
+                {
+                    <div class="alert alert-danger">
+                        <p>Failed to submit.</p>
+                    </div>
+                }
+
+                <div class="alert alert-info">
+                    <p>Valid words found:</p>
+                    <h3 class="text-center">@Model.Word</h3>
+
+                    @if (Model.ShowConfirmation)
+                    {
+                        <p>Submit?</p>
+                    }
+                </div>
+
+                @if (Model.ShowConfirmation)
+                {
+                    <div class="text-center mt-4">
+                        <form asp-action="Submit" asp-controller="Submission" method="post" style="display: inline;">
+                            <input type="hidden" name="word" value="@Model.Word" />
+                            <button type="submit" class="btn btn-success">Yes</button>
+                        </form>
+
+                        <form asp-action="Index" asp-controller="Validation" method="get" style="display: inline;">
+                            <button type="submit" class="btn btn-danger">No</button>
+                        </form>
+                    </div>
+                }
+                else
+                {
+                    <div class="text-center">
+                        <a asp-controller="Validation" asp-action="Index" class="btn btn-primary">Another?</a>
+                        <a asp-controller="Search" asp-action="Index" class="btn btn-secondary ml-2">All?</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

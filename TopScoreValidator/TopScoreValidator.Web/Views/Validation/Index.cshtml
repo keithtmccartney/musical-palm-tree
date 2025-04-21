@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Validate";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-center">TopScore String Validator</h2>
+            </div>
+            <div class="card-body">
+                @if (TempData["InformationMessage"] != null)
+                {
+                    <div class="alert alert-info">
+                        @TempData["InformationMessage"]
+                    </div>
+                }
+
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success">
+                        @TempData["SuccessMessage"]
+                    </div>
+                }
+
+                @if (!ViewData.ModelState.IsValid)
+                {
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach (var modelState in ViewData.ModelState.Values)
+                            {
+                                foreach (var error in modelState.Errors)
+                                {
+                                    <li>@error.ErrorMessage</li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                }
+
+                <form asp-action="Validate" method="post">
+                    <div class="form-group">
+                        <label for="word">Please enter a value:</label>
+                        <textarea id="word" name="word" class="form-control" rows="3" placeholder="Please enter a value containing at least one word with one uppercase letter, one lowercase letter, one number, no repeated characters, and at least 8 characters long."></textarea>
+                        <small class="form-text text-muted">Valid words must have:
+                            <ul>
+                                <li>At least one uppercase letter</li>
+                                <li>At least one lowercase letter</li>
+                                <li>At least one number</li>
+                                <li>No repeated characters</li>
+                                <li>At least 8 characters long</li>
+                            </ul>
+                        </small>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary">Validate</button>
+                        <a asp-controller="Search" asp-action="Index" class="btn btn-secondary ml-2">Search</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
